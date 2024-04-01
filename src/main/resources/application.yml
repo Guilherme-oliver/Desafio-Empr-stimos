@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: loans
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db-loans
+    password: postgres
+    username: 123456
