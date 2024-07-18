@@ -3,5 +3,9 @@ spring:
     name: loans
   datasource:
     url: jdbc:postgresql://localhost:5432/db-loans
-    password: postgres
-    username: 123456
+    username: postgres
+    password: 123456
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
