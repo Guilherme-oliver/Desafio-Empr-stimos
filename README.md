@@ -68,7 +68,7 @@ Configuração do Projeto
 
 O projeto está sendo executato com o Java 17
 
-A aplicação também conta com a ferramenta Swagger para documentação. Consulte https://swagger.io/ para mais informações.
+A aplicação também conta com a ferramenta Swagger para documentação, que pode rodar com essa URL local http://localhost:8080/swagger-ui/. Consulte https://swagger.io/ para mais informações.
 
 Configuração do Spring Boot
 O projeto utiliza Spring Boot com a seguinte configuração no arquivo application.yml:
