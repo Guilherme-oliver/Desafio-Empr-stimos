@@ -54,6 +54,16 @@ Requisitos Implementados:
 * Concede o empréstimo com garantia se o salário do cliente for igual ou inferior a R$ 3000.
 * Concede o empréstimo com garantia se o salário do cliente estiver entre R$ 3000 e R$ 5000, se o cliente tiver menos de 30 anos e residir em São Paulo (SP).
 
+Requirements:
+
+Install Java 17.
+
+Install Git.
+
+Install Maven.
+
+Install Docker Compose (or PostgreSQL*).
+
 Configuração do Projeto
 
 O projeto está sendo executato com o Java 17
@@ -109,4 +119,3 @@ Executanto o Projeto
 4. Execute a aplicação
 
 5. Contribuição: Sinta-se à vontade para contribuir com o projeto através de pull requests. Para grandes mudanças, abra uma issue primeiro para discutir o que você gostaria de mudar.
-
