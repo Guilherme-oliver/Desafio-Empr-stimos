@@ -1,8 +1,8 @@
-Projeto de Empréstimos
+## Projeto de Empréstimos
 
 Este projeto implementa um serviço para determinar quais modalidades de empréstimo uma pessoa tem acesso, baseado em critérios específicos como idade, salário e localização.
 
-Modalidades de Empréstimo
+## Modalidades de Empréstimo
 As modalidades de empréstimo disponíveis são:
 
 Empréstimo pessoal: Taxa de juros de 4%.
@@ -11,11 +11,11 @@ Empréstimo consignado: Taxa de juros de 2%.
 
 Empréstimo com garantia: Taxa de juros de 3%.
 
-Exemplo de Uso
+## Exemplo de Uso
 Para determinar as modalidades de empréstimo disponíveis para um cliente, envie uma requisição POST para {{host}}/customer-loans com os seguintes dados:
 
 json
-
+```
 {
   "age": 26,
   "cpf": "275.484.389-23",
@@ -23,11 +23,11 @@ json
   "income": 7000.00,
   "location": "SP"
 }
-
+```
 A resposta será um JSON contendo o nome do cliente e a lista de empréstimos disponíveis com seus respectivos tipos e taxas de juros:
 
 json
-
+```
 {
   "customer": "Vuxaywua Zukiagou",
   "loans": [
@@ -45,8 +45,8 @@ json
     }
   ]
 }
-
-Requisitos Implementados:
+```
+## Requisitos Implementados:
 
 * Concede o empréstimo pessoal se o salário do cliente for igual ou inferior a R$ 3000.
 * Concede o empréstimo pessoal se o salário do cliente estiver entre R$ 3000 e R$ 5000, se o cliente tiver menos de 30 anos e residir em São Paulo (SP).
@@ -54,7 +54,7 @@ Requisitos Implementados:
 * Concede o empréstimo com garantia se o salário do cliente for igual ou inferior a R$ 3000.
 * Concede o empréstimo com garantia se o salário do cliente estiver entre R$ 3000 e R$ 5000, se o cliente tiver menos de 30 anos e residir em São Paulo (SP).
 
-Requirements:
+## Requirements:
 
 Install Java 17.
 
@@ -64,15 +64,15 @@ Install Maven.
 
 Install Docker Compose (or PostgreSQL*).
 
-Configuração do Projeto
+## Configuração do Projeto
 
 O projeto está sendo executato com o Java 17
 
-A aplicação também conta com a ferramenta Swagger para documentação, que pode rodar com essa URL local http://localhost:8080/swagger-ui/. Consulte https://swagger.io/ para mais informações.
+## A aplicação também conta com a ferramenta Swagger para documentação, que pode rodar com essa URL local http://localhost:8080/swagger-ui/. Consulte https://swagger.io/ para mais informações.
 
-Configuração do Spring Boot
+## Configuração do Spring Boot
 O projeto utiliza Spring Boot com a seguinte configuração no arquivo application.yml:
-
+```
 spring:
   application:
     name: loans
@@ -84,10 +84,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        
+```
+  
 Docker Compose
 Para executar o projeto com PostgreSQL usando Docker Compose, utilize o seguinte docker-compose.yml:
-
+```
 version: '3.9'
 
 services:
@@ -101,8 +102,8 @@ services:
       - POSTGRES_DB=db-loans
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=123456
-
-Executanto o Projeto
+```
+## Executanto o Projeto
 
 1. Clone o repositório usando o SSH ou HTTPS:
    
